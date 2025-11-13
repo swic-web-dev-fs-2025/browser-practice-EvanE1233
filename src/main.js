@@ -17,8 +17,17 @@ const countElement = document.getElementById("click-count");
 function updateGreeting() {
   clickCount++;
   greetingElement.textContent = "Hello, Browser JavaScript!";
+  ``;
   countElement.textContent = `Button clicks: ${clickCount}`;
 }
 
 // Event listener - this is new! Responds to user interaction
 button.addEventListener("click", updateGreeting);
+if (clickCount >= 5) {
+  greetingElement.style.color = "red";
+}
+button.reset((clickCount = 0));
+const customText = prompt("Enter custom text for the greeting:");
+if (customText) {
+  greetingElement.textContent = customText;
+}
