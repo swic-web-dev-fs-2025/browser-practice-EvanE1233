@@ -32,3 +32,13 @@ button.textContent = "New text"; // Object properties you can change
 
 // `handleClick` is a function you define elsewhere
 button.addEventListener("click", handleClick); // Object methods you can use
+
+
+// Structure, styling, AND logic all in one component
+function TaskButton({ onClick }) {
+  return (
+    <button className="bg-blue-500 px-4 py-2 text-white" onClick={onClick}>
+      Add Task
+    </button>
+  );
+}
