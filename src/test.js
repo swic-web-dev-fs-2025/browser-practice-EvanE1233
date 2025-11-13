@@ -12,3 +12,10 @@ const adults = users.filter((user) => user.age >= 21);
 document.getElementById("user-list").innerHTML = adults
   .map((user) => `<p>${user.name} (${user.age})</p>`)
   .join("");
+  // ...becomes this JavaScript object:
+const button = document.getElementById("my-button"); // Returns an object!
+
+button.textContent = "New text"; // Object properties you can change
+
+// `handleClick` is a function you define elsewhere
+button.addEventListener("click", handleClick); // Object methods you can use
